@@ -1,11 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import * as AssetsService from "./services/assets-service";
+import { DateTime } from 'luxon'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <div>{DateTime.now().toISO()}</div>
+      {/* <header className="App-header">
         <img
           src={AssetsService.getResourceURL(logo)}
           className="App-logo"
@@ -22,7 +24,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }

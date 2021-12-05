@@ -6,12 +6,13 @@ const FileManagerPlugin = require("filemanager-webpack-plugin");
 const getFileManagerPlugin = () => {
   const isExtensionBuild = process.env.REACT_APP_BUILD_TARGET === "extension";
   const webAppBuildFiles = [
-    "index.html",
-    "favicon.ico",
-    "logo192.png",
-    "logo512.png",
-    "robots.txt",
-    "asset-manifest.json",
+    // These files are removed during the build, but we want them here since we will have a GUI.
+    // "index.html",
+    // "favicon.ico",
+    // "logo192.png",
+    // "logo512.png",
+    // "robots.txt",
+    // "asset-manifest.json",
   ];
   const extensionBuildFiles = ["icon16.png", "icon48.png", "icon128.png"];
 
